@@ -1,0 +1,1026 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a{
+    text-decoration: none;
+}
+
+
+.container{
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+/* Offer */
+
+@font-face {
+    font-family: 'Satoshi-Regular';
+    src: url('../fonts/Satoshi/Satoshi-Regular.woff2') format('woff2'),
+         url('../fonts/Satoshi/Satoshi-Regular.woff') format('woff'),
+         url('../fonts/Satoshi/Satoshi-Regular.ttf') format('truetype');
+         font-weight: 400;
+         font-display: swap;
+         font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi-Medium';
+    src: url('../fonts/Satoshi-Medium.woff2') format('woff2'),
+         url('../fonts/Satoshi-Medium.woff') format('woff'),
+         url('../fonts/Satoshi-Medium.ttf') format('truetype');
+         font-weight: 500;
+         font-display: swap;
+         font-style: normal;
+  }
+
+.offer{
+    position: relative;
+    height: 38px;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    text-align: center;
+}
+.offer span{
+    font-family: 'Satoshi-Regular', sans-serif;
+}
+.offer a{
+    font-family: 'Satoshi-Medium', sans-serif;
+    color: #fff;
+    text-decoration: underline;
+}
+.close_offer_btn{
+    position: absolute;
+    background: none;
+    outline: none;
+    border: 0;
+    padding: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-40%);
+}
+
+/* Header */
+
+.header_inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+.header_home{
+    font-family: "Alfa Slab One", serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 43.81px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #000;
+}
+
+.nav_link{
+    color: #000;
+    font-family: 'Satoshi-Regular', sans-serif;
+    font-size: 16px;
+}
+.nav_link:not(:last-child){
+    margin-right: 24px;
+}
+
+.header_input{
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+    height: 24px;
+    width: 100%;
+    background-color: #F0F0F0;
+    border-radius: 62px;
+    padding: 12px 16px;
+}
+
+.header_input input{
+    width: 100%;
+    margin-left: 12px;
+    background: none;
+    border: 0;
+    outline: 0;
+}
+.header_actions{
+    display: flex;
+    align-items: center;
+}
+.header_action_link:not(:last-child){
+    margin-right: 16px;
+}
+.burger_menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border: 0;
+    outline: 0;
+    background: none;
+    display: none;
+}
+
+.close_btn{
+    position: absolute;
+    right: 0px;
+    top: 10px;
+    border: 0;
+    outline: 0;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    display: none;
+}
+.close_btn img{
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 390px) {
+    .header{
+        max-width: 390px;
+    }
+    .header_home{
+        margin-left: 20px;
+    }
+    .header_inner{
+        max-width: 390px;
+        width: 90%;
+        position: relative;
+    }
+    .header_input{
+        display: none;
+    }
+    .nav{
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        position: absolute;
+        top: -40px;
+        padding: 20px;
+        display: none;
+    }
+    .nav_link{
+        margin-bottom: 20px;
+    }
+    .header_actions{
+        display: none;
+    }
+    .close_offer_btn{
+        display: none;
+    }
+    .burger_menu{
+        display: block;
+    }
+}
+
+/* Main page */
+
+.main_page{
+    background-color: #F2F0F1;
+}
+.main_page_inner{
+    /* height: 665px; */
+    display: flex;
+    align-items: center;
+}
+
+.main_content_left{
+    max-width: 600px;
+    width: 100%;
+    text-align: left;
+}
+.main_title{
+    font-family: "Alfa Slab One", serif;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 64px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #000;
+    margin-bottom: 30px;
+}
+.main_subtitle{
+    font-family: 'Satoshi-Regular', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #00000099;    ;
+}
+.main_btn{
+    display: inline-block;
+    padding: 16px 54px;
+    background-color: #000;
+    border-radius: 62px;
+    color: #fff;
+    font-family: 'Satoshi-Medium', sans-serif;
+    font-size: 16px;
+    margin: 32px 0 48px 0;
+}
+
+.main_stats{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main_stats_item{
+    width: 33%;
+}
+.main_stats_item:nth-child(1){
+    margin-right: 32px;
+}
+.main_stats_item:nth-child(2){
+    padding: 0 32px;
+    border-left: 1px solid #0000001A;
+    border-right: 1px solid #0000001A;
+}
+.main_stats_item:nth-child(3){
+    margin-left: 32px;
+}
+@font-face {
+    font-family: 'Satoshi-Bold';
+    src: url('../fonts/Satoshi-Bold.woff2') format('woff2'),
+         url('../fonts/Satoshi-Bold.woff') format('woff'),
+         url('../fonts/Satoshi-Bold.ttf') format('truetype');
+         font-weight: 700;
+         font-display: swap;
+         font-style: normal;
+  }
+
+.main_stats_item h3{
+    font-family: 'Satoshi-Bold', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 54px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+.main_stats_item h5{
+    font-family: 'Satoshi-Regular', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #00000099;
+}
+
+@media (max-width: 390px) {
+    .main_page_inner{
+        flex-direction: column;
+    }
+    .main_content_left{
+        width: 100%;
+        padding: 40px 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main_content_right{
+        width: 100%;
+    }
+    .main_content_right img{
+        width: 100%;
+    }
+    .main_title{
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 34px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        padding-left: 16px;
+    }
+    .main_subtitle{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        padding-left: 16px;
+    }
+    .main_btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+    }
+    .main_stats{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Brands */
+.brands{
+    background-color: #000;
+}
+.brands_inner{
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+}
+.brands_inner img{
+    height: 35px;
+}
+.brands_top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+}
+.brands_bottom{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+.brands_bottom img:not(:last-child){
+    margin-right: 100px;
+}
+
+@media (max-width: 390px){
+    .brands{
+        width: 100%;
+        padding: 39px 0 0 0;
+    }
+    
+    .brands_top img{
+        height: 23px;
+        width: 100%;
+    }
+    .brands_bottom{
+        margin-top: 22px;
+    }
+    .brands_bottom img{
+        height: 23px;
+    }
+    .brands_bottom img:not(:last-child){
+        margin-right: 20px;
+    }
+}
+
+/* New arrivals */
+
+.new_arrivals_title{
+    font-family: "Alfa Slab One", serif;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 65.71px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin: 68px 0 47px 0;
+}
+
+.new_arrivals_inner{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.new_arrivals_item{
+    width: 23%;
+    padding-bottom: 31px;
+    margin-bottom: 68px;
+}
+
+.new_arrivals_item h2{
+    font-family: 'Satoshi-Bold', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 27px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.new_arrivals_img{
+    border-radius: 20px;
+    width: 100%;
+    background-color: #F0EEED;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    margin-bottom: 16px;
+    height: 300px;
+}
+
+.new_arrivals_img img{
+    width: 50%;
+}
+.product_price span:nth-child(1){
+    font-family: 'Satoshi-Bold', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32.4px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-right: 10px;
+}
+
+.product_raiting{
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+}
+
+.product_rating_wrapper{
+    overflow: hidden;
+    width: 98.28px;
+    margin-right: 13px;
+}
+
+.product_rating_inner{
+    width: 126px;
+}
+.product_rating_inner img{
+    width: 18px;
+    height: 18px;
+}
+
+.rating_score{
+    font-family: 'Satoshi-Regular', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18.9px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+.view_all_btn{
+    width: 100%;
+    border: 1px solid #0000001A;
+    padding: 13px 0;
+    border-radius: 62px;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 390px){
+    .new_arrivals_inner{
+        display: flex;
+        height: 600px;
+        overflow: hidden;
+    }
+    .new_arrivals_item{
+        width: 48%;
+    }
+}
+
+/* Dress style */
+.dress_style{
+    border-radius: 40px;
+    padding: 70px 64px;
+    background-color: #F0F0F0;
+}
+
+.dress_style_inner{
+    display: flex;
+    flex-wrap: wrap;
+}
+.dress_style_item{
+    height: 290px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.dress_style_item img{
+    width: 100%;
+    height: 100%;
+}
+
+.dress_style_item h3{
+    position: absolute;
+    font-family: "Satoshi-Bold", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 48.6px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    top: 25px;
+    left: 36px;
+}
+
+.dress_style_item:nth-child(1){
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.dress_style_item:nth-child(2){
+    width: 68%;
+    margin-left: 2%;
+    margin-bottom: 20px;
+}
+
+.dress_style_item:nth-child(3){
+    width: 68%;
+    margin-right: 2%;
+}
+
+.dress_style_item:nth-child(4){
+    width: 30%;
+}
+
+.dress_style_title{
+    font-family: "Alfa Slab One", serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 57.6px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 64px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 390px){
+    .dress_style_inner{
+        display: flex;
+        flex-direction: column;
+    }
+    .dress_style_item:nth-child(1){
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .dress_style_item:nth-child(2){
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .dress_style_item:nth-child(3){
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .dress_style_item:nth-child(4){
+        width: 100%;
+    }
+    .dress_style{
+        padding: 40px 24px;
+    }
+}
+
+
+/* Customers */
+
+.customers{
+    margin-top: 110px;
+    margin-bottom: 60px;
+}
+
+.customers_slider{
+    position: relative;
+    overflow-x: scroll;
+    padding-top: 50px;
+}
+
+.customers_slider::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+.slider_title h3{
+    font-family: "Satoshi-Bold", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin: 15px 0;
+}
+
+.slider_text{
+    font-family: "Satoshi-Regular", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #00000099;
+}
+
+.customer_rating_inner{
+    display: flex;
+}
+.customers_title{
+    font-family: "Alfa Slab One", serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 57.6px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 100px;
+}
+
+.slider_navigation{
+    display: flex;
+    position: absolute;
+    top: -50px;
+    right: 0;
+    z-index: 200;
+}
+
+.swiper-container {
+    width: 100%;
+    overflow-x: hidden;
+}
+.swiper-wrapper{
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+}
+.swiper-slide {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 240px; /* Fixed height for uniformity */
+    border: 1px solid #0000001A;
+  }
+.swiper-slide h3 {
+    font-family: "Satoshi-Bold", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin: 15px 0;
+}
+.swiper-slide p {
+    font-family: "Satoshi-Regular", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #00000099;
+}
+.stars {
+    color: #ffc107;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+@media (max-width: 390px){
+    .customers_title{
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 36px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        padding-left: 20px;
+    }
+    .slider_navigation{
+        top: -120px;
+    }
+}
+
+/* Contact */
+
+.contact{
+    margin-bottom: -95px;
+}
+
+.contact_inner{
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 60px;
+    border-radius: 20px;
+}
+
+.contact_left{
+    width: 50%;
+}
+
+.contact_left h3{
+    color: #fff;
+    font-family: "Alfa Slab One", serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 45px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+.contact_right{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+.contact_email_input{
+    display: flex;
+    width: 350px;
+    height: 24px;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 62px;
+    padding: 12px 16px;
+    margin-bottom: 15px;
+}
+.contact_email_input input{
+    border: 0;
+    width: 100%;
+    outline: 0;
+    margin-left: 12px;
+}
+.contact_btn{
+    display: inline-block;
+    font-family: "Satoshi-Medium", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21.6px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #000;
+    background-color: #fff;
+    width: 350px;
+    height: 24px;
+    border-radius: 62px;
+    padding: 12px 16px;
+    text-align: center;
+}
+@media (max-width: 390px){
+    .contact_inner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 32px 24px;
+    }
+    .contact_left{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+    }
+    .contact_left h3{
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 35px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+    .contact_right{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .contact_email_input{
+        width: 100%;
+    }
+    .contact_btn{
+        width: 100%;
+    }
+}
+
+
+/* Footer */
+.footer{
+    background-color: #F0F0F0;
+    padding: 140px 0 90px 0;
+}
+
+.footer_inner{
+    display: flex;
+    border-bottom: 1px solid #0000001A;
+    justify-content: space-between;
+}
+.footer_item{
+    display: flex;
+    flex-direction: column;
+}
+.footer_social{
+    display: flex;
+}
+.footer_item:nth-child(1){
+    width: 20%;
+}
+.footer_item h2{
+    font-family: "Alfa Slab One", serif;
+    font-size: 33.45px;
+    font-weight: 700;
+    line-height: 40.15px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #000;
+}
+.footer_item h3{
+    font-family: "Satoshi-Medium", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 3px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #000;
+    margin-bottom: 26px;
+}
+
+.footer_item a{
+    font-family: "Satoshi-Regular", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #00000099;
+}
+.footer_item a:not(:last-child){
+    margin-bottom: 19px;
+}
+.footer_text{
+    font-family: "Satoshi-Regular", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #00000099;
+    margin: 25px 0;
+}
+
+.footer_social_item{
+    border-radius: 50%;
+    border: 1px solid #0000001A;
+    background-color: #fff;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer_social_item:nth-child(2){
+    background-color: #000;
+}
+
+.footer_social_item:not(:last-child){
+    margin-right: 12px;
+}
+.footer_copyright{
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer_copyright h3{
+    font-family: "Satoshi-Regular", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18.9px;
+    text-align: right;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #00000099;
+}
+
+.payment_methods{
+    display: flex;
+}
+
+.payment_methods a{
+    width: 45px;
+    height: 30px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+.payment_methods a:not(:last-child){
+    margin-right: 12px;
+}
+@media (max-width: 390px){
+    .footer_inner{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px;
+    }
+    .footer_item{
+        margin-bottom: 25px;
+    }
+    .footer_item:nth-child(1){
+        width: 100%;
+    }   
+
+    .footer_item:nth-child(2){
+        width: 50%;
+    }   
+
+    .footer_item:nth-child(3){
+        width: 50%;
+    }   
+
+    .footer_item:nth-child(4){
+        width: 50%;
+    }   
+
+    .footer_item:nth-child(5){
+        width: 50%;
+    }   
+
+    .footer_copyright{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .payment_methods{
+        margin-top: 16px;
+    }
+    
+}

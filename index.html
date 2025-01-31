@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop.Co</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+</head>
+<body onload="GetProducts()">
+
+    <div class="offer" id="offer">
+        <div class="container">
+            <span>Sign up and get 20% off to your first order.</span>
+            <a href="">Sign Up Now</a>
+            <button class="close_offer_btn" onclick="HidePromotion()">
+                <img src="img/offer/close.svg" alt="close-logo">
+            </button>
+        </div>
+        
+    </div>
+    <header class="header">
+        <div class="container">
+            <div class="header_inner">
+                <a href="/" class="header_home">SHOP.CO</a>
+                <nav class="nav" id="nav">
+                    <a href="" class="nav_link">Shop</a>
+                    <a href="" class="nav_link">On Sale</a>
+                    <a href="" class="nav_link">New Arrivals</a>
+                    <a href="" class="nav_link">Brands</a>
+                    <button class="close_btn" id="closeBtn" onclick="HideNav()">
+                        <img src="img/header/close.svg" alt="">
+                    </button>
+                </nav>
+                <div class="header_input">
+                    <img src="img/header/search.svg" alt="search-logo">
+                    <input type="text" placeholder="Search for products...">
+                </div>
+                <div class="header_actions">
+                    <a href="/shop" class="header_action_link">
+                        <img src="img/header/cart.svg" alt="shop-cart-logo">
+                    </a>
+                    <a href="/user" class="header_action_link">
+                        <img src="img/header/user.svg" alt="user-logo">
+                    </a>
+                </div>
+
+                <button class="burger_menu" onclick="HideNav()">
+                    <img src="img/header/burger-menu.svg" alt="">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main_page">
+            <div class="container">
+                <div class="main_page_inner">
+                    <div class="main_content_left">
+                        <h1 class="main_title">FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
+                        <h4 class="main_subtitle">Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.</h4>
+                        <a href="" class="main_btn">Shop Now</a>
+                        <div class="main_stats">
+                            <div class="main_stats_item">
+                                <h3>200+</h3>
+                                <h5>International Brands</h4>
+                            </div>
+                            <div class="main_stats_item">
+                                <h3>200+</h3>
+                                <h5>International Brands</h4>
+                            </div>
+                            <div class="main_stats_item">
+                                <h3>200+</h3>
+                                <h5>International Brands</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_content_right">
+                        <img src="img/main-pg/main.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="brands">
+            <div class="container">
+                <div class="brands_inner">
+                    <div class="brands_top">
+                        <img src="img/brands/1.svg" alt="">
+                        <img src="img/brands/5.svg" alt="">
+                    </div>
+                    <div class="brands_bottom">
+                        <img src="img/brands/2.svg" alt="">
+                        <img src="img/brands/3.svg" alt="">
+                        <img src="img/brands/4.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="new_arrivals">
+            <div class="container">
+                <h3 class="new_arrivals_title">NEW ARRIVALS</h3>
+                <div class="new_arrivals_inner" id="newArrivals"></div>
+                <button class="view_all_btn" id="viewAllBtn" onclick="ViewAll()">View All</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="dress_style">
+                <h2 class="dress_style_title">BROWSE BY dress STYLE</h2>
+                <div class="dress_style_inner">
+                    <div class="dress_style_item">
+                        <h3>Casual</h3>
+                        <img src="img/dress-style/1.jpg" alt="">
+                    </div>
+                    <div class="dress_style_item">
+                        <h3>Formal</h3>
+                        <img src="img/dress-style/2.jpg" alt="">
+                    </div>
+                    <div class="dress_style_item">
+                        <h3>Party</h3>
+                        <img src="img/dress-style/3.jpg" alt="">
+                    </div>
+                    <div class="dress_style_item">
+                        <h3>Gym</h3>
+                        <img src="img/dress-style/4.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="customers">
+            <div class="container">
+                <h3 class="customers_title">OUR HAPPY CUSTOMERS</h3>
+                <div class="container">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="stars">★★★★★</div>
+                                <h3>Sarah M.</h3>
+                                <p>"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations."</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="stars">★★★★★</div>
+                                <h3>Alex K.</h3>
+                                <p>"Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and occasions."</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="stars">★★★★★</div>
+                                <h3>James L.</h3>
+                                <p>"As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends."</p>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="stars">★★★★★</div>
+                                <h3>James L.</h3>
+                                <p>"As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends."</p>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="stars">★★★★★</div>
+                                <h3>James L.</h3>
+                                <p>"As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends."</p>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="stars">★★★★★</div>
+                                <h3>James L.</h3>
+                                <p>"As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends."</p>
+                            </div>
+                        </div>
+                    
+                    
+                        <!-- Add Navigation -->
+                        <div class="slider_navigation">
+                            <div class="button-prev">
+                                <img src="img/customers/arrow-prev.svg" alt="">
+                            </div>
+                            <div class="button-next">
+                                <img src="img/customers/arrow-next.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact">
+            <div class="container">
+                <div class="contact_inner">
+                    <div class="contact_left">
+                        <h3>STAY UPTO DATE ABOUT OUR LATEST OFFERS</h3>
+                    </div>
+                    <div class="contact_right">
+                        <div class="contact_email_input">
+                            <img src="img/contact/email.svg" alt="">
+                            <input type="text" placeholder="Enter your email address">
+                        </div>
+                        <a href="" class="contact_btn">
+                            Subscribe to Newsletter
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer_inner">
+                    <div class="footer_item">
+                        <h2>SHOP.CO</h2>
+                        <div class="footer_text">We have clothes that suits your style and which you’re proud to wear. From women to men.</div>
+                        <div class="footer_social">
+                            <a href="" class="footer_social_item">
+                                <img src="img/footer/twitter.svg" alt="">
+                            </a>
+
+                            <a href="" class="footer_social_item">
+                                <img src="img/footer/facebook.svg" alt="">
+                            </a>
+
+                            <a href="" class="footer_social_item">
+                                <img src="img/footer/instagram.svg" alt="">
+                            </a>
+
+                            <a href="" class="footer_social_item">
+                                <img src="img/footer/github.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer_item">
+                        <h3>Company</h3>
+                        <a href="">About</a>                        
+                        <a href="">Features</a>                        
+                        <a href="">Works</a>                        
+                        <a href="">Career</a>                        
+                    </div>
+
+                    <div class="footer_item">
+                        <h3>Help</h3>
+                        <a href="">Customer Support</a>                        
+                        <a href="">Delivery Details</a>                        
+                        <a href="">Terms & Conditions</a>                        
+                        <a href="">Privacy Policy</a>                        
+                    </div>
+
+                    <div class="footer_item">
+                        <h3>FAQ</h3>
+                        <a href="">Account</a>                        
+                        <a href="">Manage Deliveries</a>                        
+                        <a href="">Orders</a>                        
+                        <a href="">Payments</a>                        
+                    </div>
+
+                    <div class="footer_item">
+                        <h3>Resources</h3>
+                        <a href="">Free eBooks</a>                        
+                        <a href="">Development Tutorial</a>                        
+                        <a href="">How to - Blog</a>                        
+                        <a href="">Youtube Playlist</a>                        
+                    </div>
+                </div>
+                <div class="footer_copyright">
+                    <h3>Shop.co © 2000-2023, All Rights Reserved</h3>
+                    <div class="payment_methods">
+                        <a href="">
+                            <img src="img/footer/visa.svg" alt="">
+                        </a>
+                        <a href="">
+                            <img src="img/footer/mastercard.svg" alt="">
+                        </a>
+                        <a href="">
+                            <img src="img/footer/paypal.svg" alt="">
+                        </a>
+                        <a href="">
+                            <img src="img/footer/a-pay.svg" alt="">
+                        </a>
+                        <a href="">
+                            <img src="img/footer/g-pay.svg" alt="">
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
